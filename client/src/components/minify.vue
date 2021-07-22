@@ -114,11 +114,9 @@ export default {
       if (this.minifyData && !this.selectFormat) {
         this.err = true;
       } else {
-        fetch("http://45.14.12.224/1000", {
+        fetch("https://localhost:1000/", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+ 
           body: JSON.stringify({
             userCode: this.codeFile,
             selectFormat: this.selectFormat,
