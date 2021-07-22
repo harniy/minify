@@ -15,7 +15,7 @@ app.post('/', async function (req, res) {
     const userCode = req.body.userCode
     let fileExtension = ''
     let fileName = ''
-
+    console.log(userCode)
     if (userCode.includes('base64')) {
         const userCodeSort = userCode.split('base64')
 
@@ -92,8 +92,8 @@ app.post('/', async function (req, res) {
 })
 
 
-app.listen(2030, () => {
-    console.log("Server start on 2030 PORT")
+app.listen(1000, () => {
+    console.log("Server start on 1000 PORT")
 })
 
 

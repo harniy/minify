@@ -3,10 +3,10 @@
     <h1>Minimizer</h1>
     <div class="info__block">
       <p>
-        Minify your <span>Html</span>, <span>CSS</span>. or <span>JS</span> code simply. All you need is to upload your file and click
-        "Compress", and then the program will do everything by itself. You will
-        get clean and optimized code, without spaces, empty lines and
-        unnecessary data. Enjoy!
+        Minify your <span>Html</span>, <span>CSS</span>. or <span>JS</span> code
+        simply. All you need is to upload your file and click "Compress", and
+        then the program will do everything by itself. You will get clean and
+        optimized code, without spaces, empty lines and unnecessary data. Enjoy!
       </p>
     </div>
 
@@ -114,9 +114,11 @@ export default {
       if (this.minifyData && !this.selectFormat) {
         this.err = true;
       } else {
-        fetch("https://localhost:1000/", {
+        fetch("https://minify-code.ml/compress", {
           method: "POST",
- 
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify({
             userCode: this.codeFile,
             selectFormat: this.selectFormat,
